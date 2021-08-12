@@ -1,8 +1,9 @@
 FROM ubuntu:20.04
 
 WORKDIR /root
-RUN apt-get update && apt-get install -y build-essential wget vim unzip git python3
+RUN apt-get update && apt-get install -y build-essential wget vim unzip git python3 python3-pip
 RUN apt-get --no-install-recommends install openjdk-11-jdk -y
+RUN pip3 install numpy 
 
 RUN git clone https://github.com/unixnme/mutli-sense-embedding.git multisense
 WORKDIR /root/multisense
