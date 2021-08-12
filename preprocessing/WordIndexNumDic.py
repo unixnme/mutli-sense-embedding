@@ -13,7 +13,7 @@ def GetFreList(filename):
         N_word=N_word+len(G);
         for item in G:
             if len(item)==0:continue;
-            if Frequency_List.has_key(item)is False:
+            if item not in Frequency_List:
                 Frequency_List[item]=0;
             Frequency_List[item]=Frequency_List[item]+1;
     return [Frequency_List,N_word];
@@ -49,7 +49,7 @@ def GetFileIndex(Dic,inputfile,outputfile):
         word_list=line.strip().split(" ");
         for item in word_list:
             if len(item)==0:continue;
-            if Dic.has_key(item):
+            if item in Dic:
                 output_.write(str(Dic[item])+" ");
             else: output_.write("0 ");
         output_.write("\n");

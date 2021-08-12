@@ -73,7 +73,7 @@ public class CRP_multi_sense{
     }
 
     public static void run()throws Exception{
-        int thread_num=16;
+        int thread_num=4;
         int batch_size=200;
         ExecutorService executor = Executors.newFixedThreadPool(thread_num);
         int Iter=3;
